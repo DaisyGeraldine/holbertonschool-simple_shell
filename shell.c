@@ -40,7 +40,8 @@ int main(int ac __attribute__((unused)), char **av)
 		ret = create_child(line, args, av);
 
 		if (ret == 1)
-			return (ret);
+			_exit(0);
+		/*return (ret);*/
 	}
 	/*free_arg(args);*/
 	/*free(line);*/
