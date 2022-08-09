@@ -19,7 +19,7 @@ char *shell_read_line(void)
 
 	if (read == EOF)
 	{
-		printf("\n");
+		/*printf("\n");*/
 		free(line);
 		exit(EXIT_FAILURE);
 	}
