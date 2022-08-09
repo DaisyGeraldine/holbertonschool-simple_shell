@@ -5,11 +5,11 @@
  * Description: signal Ctrl + D
  * Return: nothing
  */
-void sig_handler(int signo)
+void sig_handler(int signum)
 {
-	if (signo == SIGINT)
+	if (signum == SIGINT)
 	{
-		return;
+		write(1, "\n#cisfun$ ", 10);
 	}
 }
 /**
