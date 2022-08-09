@@ -7,11 +7,12 @@
 char *shell_read_line(void)
 {
 	char *line = NULL;
-	size_t len = 0;
+	size_t len = 0, st_isatty = 0;
 	ssize_t read = 0;
 
-	if (isatty(STDIN_FILENO))
-		printf("#cisfun$ ");
+	st_isatty = isatty(STDIN_FILENO);
+	if (st_isatty == 1)
+		write(1, "#cisfun$ ", 9);
 
 	/*signal(SIGINT, sig_handler);*/
 	read = getline(&line, &len, stdin);
