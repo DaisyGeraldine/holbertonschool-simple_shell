@@ -17,7 +17,7 @@ int create_child(char *_line, char **_args, char **_av)
 	{
 		if (execve(_args[0], _args, NULL) == -1)
 		{
-			printf("%s: No such file or directory\n", _av[0]);
+			printf("%s: No such file or directory", _av[0]);
 			free_arg(_args);
 			free(_line);
 			return (1);
