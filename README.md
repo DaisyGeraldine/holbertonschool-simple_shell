@@ -72,7 +72,8 @@ Compiled with Ubuntu 20.04 LTS using flags `-Wall -Werror -Wextra -pedantic std=
 echo "ls -l" | ./hsh
 ```
 ![enter image description here](https://github.com/DaisyGeraldine/holbertonschool-simple_shell/blob/master/mode_interactive.gif?raw=true)
-**Interactive Mode*** Activate the shell
+
+**Interactive Mode***Activate the shell
 ```
 (your_terminal)$ ./hsh
 #cisfun$
