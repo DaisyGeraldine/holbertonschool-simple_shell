@@ -94,37 +94,59 @@ shell_create_child.c - function that executes a program and sends it to the curr
 shell_aux_function.c - function sig_handler that detects a control + c and function separator_counter that separates a string according to the separator.
 .Pp
 .Sh BUGS
-We have some memory leaks on our project, and we have some functions that exceed \
-the limit of lines.
+We have some memory leaks on our project.
 .Pp
 .SH EXAMPLE
 .PP
 .in +4n
-.EX
+.Pp
+.It
 root@DESKTOP-K0KHTBP:~/holbertonschool-simple_shell# gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 root@DESKTOP-K0KHTBP:~/holbertonschool-simple_shell# ./hsh
+.Pp
+.It
 #cisfun$ ls
 AUTHORS         README.md  mode_interactive.gif     shell.c  shell_aux_function.c  shell_execute.c  shell_read_line.c
 Flowchart_.png  hsh        mode_no_interactive.gif  shell.h  shell_create_child.c  shell_free.c     shell_split_line.c
+.It
 #cisfun$ ls -l -a
+.It
 total 2772
-drwxr-xr-x  3 root root    4096 Aug  9 05:44	
+.It
+drwxr-xr-x  3 root root    4096 Aug  9 05:44
+.It
 drwx------ 11 root root    4096 Aug  9 05:28 ..
+.It
 drwxr-xr-x  8 root root    4096 Aug  9 05:28 .git
+.It
 -rw-r--r--  1 root root     161 Aug  9 03:34 AUTHORS
+.It
 -rw-r--r--  1 root root  333052 Aug  9 05:07 Flowchart_.png
+.It
 -rw-r--r--  1 root root    7622 Aug  9 05:28 README.md
+.It
 -rwxr-xr-x  1 root root   18360 Aug  9 05:44 hsh
+.It
 -rw-r--r--  1 root root 1821585 Aug  9 05:07 mode_interactive.gif
+.It
 -rw-r--r--  1 root root  600473 Aug  9 05:07 mode_no_interactive.gif
+.It
 -rw-r--r--  1 root root     870 Aug  9 03:35 shell.c
+.It
 -rw-r--r--  1 root root     647 Aug  8 22:12 shell.h
+.It
 -rw-r--r--  1 root root     532 Aug  8 22:18 shell_aux_function.c
+.It
 -rw-r--r--  1 root root     559 Aug  9 03:35 shell_create_child.c
+.It
 -rw-r--r--  1 root root    1492 Aug  8 22:32 shell_execute.c
+.It
 -rw-r--r--  1 root root     305 Aug  8 22:07 shell_free.c
+.It
 -rw-r--r--  1 root root     466 Aug  9 03:35 shell_read_line.c
+.It
 -rw-r--r--  1 root root     848 Aug  8 22:32 shell_split_line.c
+.It
 .Sh
 .Sh AUTHORS
 .Pp
