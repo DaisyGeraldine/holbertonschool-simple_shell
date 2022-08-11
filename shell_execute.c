@@ -7,7 +7,7 @@
  */
 char *search_execute(char *exe)
 {
-	char *path = NULL, *delims = {":\n"}, *concat_path = NULL;
+	char *path = NULL, *delims = {":"}, *concat_path = NULL;
 	char **list_path = NULL;
 	size_t i = 0, len_line = 0;
 	struct stat st;

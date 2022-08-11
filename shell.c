@@ -8,7 +8,7 @@
  */
 int main(int ac __attribute__((unused)), char **av)
 {
-	char *line = NULL, *delims = {" \n"}, *arg_0 = NULL;
+	char *line = NULL, *delims = {" \t\n"}, *arg_0 = NULL;
 	char **args = NULL;
 	int ret = 0;
 
@@ -16,6 +16,12 @@ int main(int ac __attribute__((unused)), char **av)
 	while (1)
 	{
 		line = shell_read_line();
+
+		if (validate_spaces(line))
+		{
+			free(line);
+			continue;
+		}
 		if (strcmp(line, "env\n") == 0)
 		{
 			print_env();
@@ -25,7 +31,7 @@ int main(int ac __attribute__((unused)), char **av)
 		if (strcmp(line, "exit\n") == 0)
 		{
 			free(line);
-			exit(0);
+			break;
 		}
 		args = shell_split_line(line, delims, ' ');
 
