@@ -7,7 +7,7 @@
  * Description: signal Ctrl + D
  * Return: nothing
  */
-int create_child(char *_line, char **_args, char **_av)
+void create_child(char *_line, char **_args, char **_av)
 {
 	pid_t parent;
 	int status = 0;
@@ -21,14 +21,27 @@ int create_child(char *_line, char **_args, char **_av)
 			printf("%s: No such file or directory\n", _av[0]);
 			free_arg(_args);
 			free(_line);
-			return (1);
+			/*return (1);*/
+			exit(EXIT_FAILURE);
 		}
+	}
+	else if (parent < 0)
+	{
+		perror("process error");
+		free(_args);
+		free(_line);
+		/*return (1);*/
 	}
 	else
 	{
-		wait(&status);
+		/*wait(&status);*/
+		waitpid(-1, &status, 0);
+		if (WIFEXITED(status))
+			WEXITSTATUS(status);
+		/*return (1);*/
 	}
 	free_arg(_args);
 	free(_line);
-	return (0);
+	/*return (0);*/
+	/*return (1);*/
 }

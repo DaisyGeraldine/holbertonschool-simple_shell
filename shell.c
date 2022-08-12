@@ -10,7 +10,7 @@ int main(int ac __attribute__((unused)), char **av)
 {
 	char *line = NULL, *delims = {" \t\n"}, *arg_0 = NULL;
 	char **args = NULL;
-	int ret = 0;
+	/*int ret = 0;*/
 
 	signal(SIGINT, sig_handler);
 	while (1)
@@ -43,10 +43,10 @@ int main(int ac __attribute__((unused)), char **av)
 			args[0] = arg_0;
 			arg_0 = NULL;
 		}
-		ret = create_child(line, args, av);
+		create_child(line, args, av);
 
-		if (ret == 1)
-			return (ret);
+		/*if (ret == 1)*/
+		/*return (ret);*/
 	}
 	/*free_arg(args);*/
 	/*free(line);*/

@@ -13,7 +13,7 @@ char *shell_read_line();
 /* shell_split_line.c */
 char **shell_split_line(char *line, char *delims, char sep);
 /* shell_create_child.c */
-int create_child(char *_line, char **_args, char **_av);
+void create_child(char *_line, char **_args, char **_av);
 /* shell_aux_function.c */
 void sig_handler(int signo);
 int separator_counter(char *line, char sep);
